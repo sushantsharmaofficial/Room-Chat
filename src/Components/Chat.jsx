@@ -64,14 +64,14 @@ export const Chat = (props) => {
           </div>
         </div>
       </div>
-      <div className="right w-3/4 flex flex-col flex-auto h-[100vh] p-6">
+      <div className="right w-3/4 flex flex-col flex-auto  h-[100vh] p-6">
         <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4">
           <div className=" bg-gray-900 rounded-t-lg">
             <h1 className="text-3xl font-bold p-4 text-center">
               Welcome TO: {room.toUpperCase()}
             </h1>
           </div>
-          <div className=" flex flex-col   max-h-[80vh] overflow-scroll overflow-x-auto mb-4">
+          <div className=" flex flex-col   min-h-[75vh] overflow-scroll overflow-x-auto mb-4">
             {messages.map((message) => (
               <div className="message flex gap-5 " key={message.id}>
                 <div className="avatar online  items-center mb-2">

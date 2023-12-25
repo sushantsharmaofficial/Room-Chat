@@ -35,7 +35,7 @@ function App() {
       {room ? (
         <div>
           <Chat room={room} />
-          <div className=" -mt-[94.5vh] ml-[180vh]">
+          <div className=" -mt-[94.5vh]  ml-[180vh]">
             <button
               className="btn btn-outline px-4 py-2 btn-error  "
               onClick={signUserOut}

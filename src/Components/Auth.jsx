@@ -25,11 +25,7 @@ export const Auth = (props) => {
       }}
     >
       <div className="   bg-no-repeat backdrop-blur-sm bg-slate-950/30 rounded-xl">
-        <div className="hero-content w-[90vh] h-[50vh] gap-10 flex-col border border-gray-60 shadow-2xl lg:flex-row  ">
-          <img
-            src="https://img.freepik.com/premium-vector/chatting-messaging-man-woman-chatting-smartphone-hand-holding-mobile-phone-with-text-messages_136162-238.jpg?w=2000"
-            className=" w-72 h-96 rounded-lg shadow-2xl"
-          />
+        <div className="hero-content w-[90vh] h-[50vh] gap-1 flex-col rounded-2xl border border-gray-60 shadow-2xl lg:flex-row  ">
           <div className=" max-w-sm">
             <h1 className="text-6xl font-bold text-white  -mt-6 mb-5">
               Room Chat
@@ -51,6 +47,10 @@ export const Auth = (props) => {
               </span>
             </button>
           </div>
+          <img
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/edc3ab78364175.5ca3009cb66a0.gif"
+            className=" w-80 h-96 rounded-lg shadow-2xl"
+          />
         </div>
       </div>
     </div>

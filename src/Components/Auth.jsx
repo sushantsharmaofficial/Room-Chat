@@ -17,14 +17,41 @@ export const Auth = (props) => {
   };
 
   return (
-    <div className="auth border bg-black border-white max-w-md ml-[85vh] mt-[40vh]  items-center text-center rounded-lg shadow-lg">
-      <div className=" px-10 py-5">
-        <h1 className=" text-4xl font-bold  mb-5 text-white">
-          Sign with Google
-        </h1>
-        <button className="btn  btn-info" onClick={signInWIthGoogle}>
-          sign in with google
-        </button>
+    <div
+      className="hero min-h-screen backdrop-blur-sm "
+      style={{
+        backgroundImage:
+          "url(https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/Desktop.png)",
+      }}
+    >
+      <div className="   bg-no-repeat backdrop-blur-sm bg-slate-950/30 rounded-xl">
+        <div className="hero-content w-[90vh] h-[50vh] gap-10 flex-col border border-gray-60 shadow-2xl lg:flex-row  ">
+          <img
+            src="https://img.freepik.com/premium-vector/chatting-messaging-man-woman-chatting-smartphone-hand-holding-mobile-phone-with-text-messages_136162-238.jpg?w=2000"
+            className=" w-72 h-96 rounded-lg shadow-2xl"
+          />
+          <div className=" max-w-sm">
+            <h1 className="text-6xl font-bold text-white  -mt-6 mb-5">
+              Room Chat
+            </h1>
+            <p className="py-6 mb-5">
+              Invite Your Friends and make Private Room to Chat....With Room
+              Chat
+            </p>
+            <button
+              onClick={signInWIthGoogle}
+              className="btn bg-white text-blue-800"
+            >
+              Sign in With Google{" "}
+              <span>
+                <img
+                  className=" max-w-5"
+                  src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { auth, db } from "../Firebase/FIrebaseConfig";
-import { NavBar } from "./NavBar";
 
 export const Chat = (props) => {
   const { room } = props;
@@ -52,21 +51,31 @@ export const Chat = (props) => {
   };
   return (
     <div className="whole-page flex ">
-      <div className="left flex w-1/4">
-        <NavBar />
+      <div className="left flex w-1/4 p-6 h-[100vh]">
+        <div className="flex flex-col flex-auto rounded-2xl bg-gray-100 max-w-[50vh] overflow-hidden">
+          <div>
+            <img src="https://media0.giphy.com/media/26FPJGjhefSJuaRhu/giphy.gif?cid=6c09b952wn6d9tptpy47qd9h3ycvvyxtlzr53lny79s05pcd&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" />
+          </div>
+          <div>
+            <img src="https://media0.giphy.com/media/26FPJGjhefSJuaRhu/giphy.gif?cid=6c09b952wn6d9tptpy47qd9h3ycvvyxtlzr53lny79s05pcd&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" />
+          </div>
+          <div>
+            <img src="https://media0.giphy.com/media/26FPJGjhefSJuaRhu/giphy.gif?cid=6c09b952wn6d9tptpy47qd9h3ycvvyxtlzr53lny79s05pcd&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" />
+          </div>
+        </div>
       </div>
-      <div className="right w-3/4 flex flex-col flex-auto h-full p-6">
+      <div className="right w-3/4 flex flex-col flex-auto h-[100vh] p-6">
         <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4">
           <div className=" bg-gray-900 rounded-t-lg">
             <h1 className="text-3xl font-bold p-4 text-center">
               Welcome TO: {room.toUpperCase()}
             </h1>
           </div>
-          <div className=" flex flex-col h-[70vh] max-h-[80vh] overflow-scroll overflow-x-auto mb-4">
+          <div className=" flex flex-col   max-h-[80vh] overflow-scroll overflow-x-auto mb-4">
             {messages.map((message) => (
               <div className="message flex gap-5 " key={message.id}>
-                <div className="chat-image avatar items-center mb-2">
-                  <div className="w-10 rounded-full">
+                <div className="avatar online  items-center mb-2">
+                  <div className=" w-16 rounded-full">
                     <img
                       alt="Tailwind CSS chat bubble component"
                       src={message.image}
@@ -75,7 +84,7 @@ export const Chat = (props) => {
                 </div>
                 <div className="flex flex-col">
                   <h1>{message.user}</h1>
-                  <div className="chat-bubble mb-2 w-full">{message.text}</div>
+                  <div className="chat-bubble  mb-2 w-full">{message.text}</div>
                 </div>
               </div>
             ))}
